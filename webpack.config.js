@@ -38,10 +38,15 @@ module.exports = {
                 use: "ts-loader",
                 exclude: /node_modules/
             },
+            // {
+            //     test: /\.css$/,
+            //     include: path.resolve(__dirname, "src"), //specifying the include makes it only do the files necessary
+            //     use: ["style-loader", "css-loader"]
+            // },
             {
-                test: /\.css$/,
+                test: /\.s[ac]ss$/,
                 include: path.resolve(__dirname, "src"), //specifying the include makes it only do the files necessary
-                use: ["style-loader", "css-loader"]
+                use: ["style-loader", "css-loader", "sass-loader"]
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,

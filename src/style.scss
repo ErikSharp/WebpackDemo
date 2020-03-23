@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "PolandCannedIntoFuture-OxE3";
+    src: url("./PolandCannedIntoFuture-OxE3.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+$color2: red;
+
+body {
+    background: linear-gradient(cornflowerblue, $color2);
+
+    & .hello {
+        color: gainsboro;
+        background: url("./Azureus2.png");
+        font-family: "PolandCannedIntoFuture-OxE3";
+        font-size: 9rem;
+    }
+}

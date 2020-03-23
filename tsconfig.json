@@ -4,6 +4,8 @@
         "noImplicitAny": true,
         "module": "esNext",
         "target": "esNext",
-        "sourceMap": true
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
     }
 }

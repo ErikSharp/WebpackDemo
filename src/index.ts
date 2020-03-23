@@ -1,5 +1,5 @@
 import _ from "lodash";
-import "./style.css";
+import "./style.scss";
 import Erik from "./Azureus2.png";
 import Data from "./data.xml";
 import Names from "./names.csv";
