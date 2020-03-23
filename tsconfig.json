@@ -5,6 +5,7 @@
         "module": "esNext",
         "target": "esNext",
         "sourceMap": true,
+        //apparently these next two are needed for lodash as there is no default export
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true
     }
