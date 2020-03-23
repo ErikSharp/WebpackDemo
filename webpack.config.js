@@ -5,8 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
     mode: "development",
     entry: {
-        app: "./src/index.js",
-        print: "./src/print.js"
+        app: "./src/index.ts"
     },
     devtool: "inline-source-map",
     //web server that serves the bundles from memory
@@ -35,19 +34,28 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.tsx?$/,
+                use: "ts-loader",
+                exclude: /node_modules/
+            },
+            {
                 test: /\.css$/,
+                include: path.resolve(__dirname, "src"), //specifying the include makes it only do the files necessary
                 use: ["style-loader", "css-loader"]
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
+                include: path.resolve(__dirname, "src"),
                 use: ["file-loader"]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
+                include: path.resolve(__dirname, "src"),
                 use: ["file-loader"]
             },
             {
                 test: /\.(csv|tsv)$/,
+                include: path.resolve(__dirname, "src"),
                 loader: "csv-loader",
                 options: {
                     dynamicTyping: true,
@@ -57,8 +65,12 @@ module.exports = {
             },
             {
                 test: /\.xml$/,
+                include: path.resolve(__dirname, "src"),
                 use: ["xml-loader"]
             }
         ]
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"]
     }
 };

@@ -4,7 +4,7 @@ import Erik from "./Azureus2.png";
 import Data from "./data.xml";
 import Names from "./names.csv";
 import Colors from "./colors.json";
-import printMe from "./print.js";
+import printMe from "./print";
 
 function component() {
     const element = document.createElement("div");
